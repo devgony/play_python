@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "play-python"
+version = "0.1.0"
+description = ""
+authors = ["henry <devgony@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+start = "run:start"
+test = "run:test"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.110.0"
+uvicorn = { extras = ["standard"], version = "^0.28.0" }
+pytest-asyncio = "^0.23.5.post1"
+async-asgi-testclient = "^1.4.11"
+anyio = "^4.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
