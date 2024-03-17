@@ -11,11 +11,11 @@ test = "run:test"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-fastapi = "^0.110.0"
-uvicorn = { extras = ["standard"], version = "^0.28.0" }
-pytest-asyncio = "^0.23.5.post1"
+fastapi = "^0.103.2"
+uvicorn = "0.17.6"
+pytest-asyncio = "^0.23.3"
 async-asgi-testclient = "^1.4.11"
-anyio = "^4.3.0"
+starlette-context = "^0.3.6"
 
 
 [build-system]

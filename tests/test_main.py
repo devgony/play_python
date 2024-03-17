@@ -15,6 +15,7 @@ async def client():
         yield ac
 
 async def test_stream_err(client: TestClient):
+    print("")
     endpoint = "/stream-err"
     response = await client.get(endpoint, stream=True)
     async for res in response.__aiter__():
@@ -23,6 +24,7 @@ async def test_stream_err(client: TestClient):
         assert re.match(r"\d+ \/ \d+ \(\d+\.\d+%\)", res) or res == ""
 
 async def test_stream_ok(client: TestClient):
+    print("")
     endpoint = "/stream-ok"
     response = await client.get(endpoint, stream=True)
     async for res in response.__aiter__():
